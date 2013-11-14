@@ -161,10 +161,10 @@ public class EmojiEditText extends EditText {
                                 "emoji_" + hexStr, "drawable", getContext().getPackageName());
                         Drawable emoji = getContext().getResources()
                                 .getDrawable(id);
-                        emoji.setBounds(0, 0, emoji.getIntrinsicWidth() / 2,
-                                emoji.getIntrinsicHeight() / 2);
+                        emoji.setBounds(0, 0, this.getLineHeight(),
+                                this.getLineHeight());
                         ImageSpan imageSpan = new ImageSpan(emoji,
-                                ImageSpan.ALIGN_BASELINE);
+                                ImageSpan.ALIGN_BOTTOM);
                         spannable.setSpan(imageSpan, tagStartPosition, tagEnd,
                                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                     } catch (Exception e) {
