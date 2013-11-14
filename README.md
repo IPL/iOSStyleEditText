@@ -4,8 +4,12 @@ In Android, the Emoji images are black and white. They look not quite beautiful.
 
 The images are from here: https://github.com/github/gemoji.
 
+![Here is a screenshot from the sample app][1]
+
 Licence
 -------------------------------------------------------------
 Apache License Version 2.0
 
 Please see the LICENSE-2.0.txt.
+
+  [1]: screenshots/ios_emoji_style_edittext.png "screenshot.png"
