@@ -10,6 +10,7 @@ import android.text.InputFilter;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
@@ -43,6 +44,8 @@ public class EmojiEditText extends EditText {
         filter = new InputFilter() {
             public CharSequence filter(CharSequence source, int start, int end,
                     Spanned dest, int dstart, int dend) {
+                if (TextUtils.isEmpty(source))
+                    return null;
                 byte[] bytes = source.toString().getBytes();
                 String hexStr = convert(bytes);
                 try {
